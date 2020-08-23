@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GradeViewer", "GradeViewer\GradeViewer.csproj", "{91398A5A-177C-4193-A311-34F9437F8792}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91398A5A-177C-4193-A311-34F9437F8792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91398A5A-177C-4193-A311-34F9437F8792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91398A5A-177C-4193-A311-34F9437F8792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91398A5A-177C-4193-A311-34F9437F8792}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B32D41A1-2851-4B06-852C-2B320CC39765}
+	EndGlobalSection
+EndGlobal

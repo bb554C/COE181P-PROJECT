@@ -1,0 +1,17 @@
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\bin\Debug\GradeViewer.exe.config
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\bin\Debug\GradeViewer.exe
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\bin\Debug\GradeViewer.pdb
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\MainWindow.g.cs
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\App.g.cs
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\GradeViewer_MarkupCompile.cache
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\GradeViewer_MarkupCompile.lref
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\MainWindow.baml
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\GradeViewer.g.resources
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\GradeViewer.Properties.Resources.resources
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\GradeViewer.csproj.GenerateResource.cache
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\GradeViewer.csproj.CoreCompileInputs.cache
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\GradeViewer.exe
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\GradeViewer.pdb
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\Forms\PinCode.g.cs
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\Forms\PinCode.baml
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\GradeViewer.csprojAssemblyReference.cache
