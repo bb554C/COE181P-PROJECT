@@ -15,3 +15,7 @@ C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\GradeViewe
 C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\Forms\PinCode.g.cs
 C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\Forms\PinCode.baml
 C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\GradeViewer.csprojAssemblyReference.cache
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\Forms\NewEntry.g.cs
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\Forms\NewUser.g.cs
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\Forms\NewEntry.baml
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\Forms\NewUser.baml

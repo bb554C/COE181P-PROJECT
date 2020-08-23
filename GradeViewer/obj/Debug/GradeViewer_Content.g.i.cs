@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("logo/erase.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("logo/checkmark.png")]
 
 

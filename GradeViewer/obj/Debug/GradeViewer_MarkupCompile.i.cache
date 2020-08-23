@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\App.xaml
-21913166487
+5-344593332
 
-71011172422
+10873806938
 13-1505183044
-Forms\PinCode.xaml;MainWindow.xaml;
+Forms\BackOffice.xaml;Forms\NewEntry.xaml;Forms\NewUser.xaml;Forms\PinCode.xaml;MainWindow.xaml;
 
-False
+True
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GradeViewer"
         mc:Ignorable="d"
-        Title="MainWindow" MinWidth="800" MinHeight="600">
+        Title="Grade Viewer System" MinWidth="800" MinHeight="600" WindowStartupLocation="CenterScreen" WindowState="Maximized" Width="800" Height="600">
     <Grid Background="#E5969696">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -128,7 +128,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="buttonAdmin" Grid.ColumnSpan="25" Grid.Column="7" Grid.Row="17" Grid.RowSpan="25" Click="buttonBackOffice_Click" BorderBrush="#FF1E1EAF" Padding="0" Margin="0">
+        <Button x:Name="buttonAdmin" Grid.ColumnSpan="25" Grid.Column="7" Grid.Row="17" Grid.RowSpan="25" Click="buttonBackOffice_Click" BorderBrush="#FF1E1EAF" Padding="0" Margin="0" Cursor="Hand">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="6*"/>
@@ -142,7 +142,7 @@
                 </Viewbox>
             </Grid>
         </Button>
-        <Button x:Name="buttonView" Grid.ColumnSpan="25" Grid.Column="38" Grid.Row="17" Grid.RowSpan="25" Padding="0" BorderBrush="#FF1E1EAF">
+        <Button x:Name="buttonView" Grid.ColumnSpan="25" Grid.Column="38" Grid.Row="17" Grid.RowSpan="25" Padding="0" BorderBrush="#FF1E1EAF" Cursor="Hand">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="6*"/>

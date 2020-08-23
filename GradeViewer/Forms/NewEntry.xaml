@@ -1,0 +1,128 @@
+﻿<Window x:Class="GradeViewer.Forms.NewEntry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GradeViewer.Forms"
+        mc:Ignorable="d"
+        Title="NewEntry" MinWidth="400" MinHeight="400" Height="400" Width="400" WindowStartupLocation="CenterScreen" Closing="newEntryClosing">
+    <Grid Background="#E5969696">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
+            <Label x:Name="labelAY" Content="Academic Year:" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Consolas"/>
+        </Viewbox>
+        <ComboBox x:Name="comboBoxAY" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="2" Grid.RowSpan="3" Padding="5" VerticalContentAlignment="Center"/>
+        <Viewbox Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
+            <Label x:Name="labelQuarter" Content="Quarter:" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Consolas"/>
+        </Viewbox>
+        <ComboBox x:Name="comboBoxQuarter" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="6" Grid.RowSpan="3" VerticalContentAlignment="Center" Padding="5">
+            <ListBoxItem Content="1Q" FontFamily="Consolas"/>
+            <ListBoxItem Content="2Q" FontFamily="Consolas"/>
+            <ListBoxItem Content="3Q" FontFamily="Consolas"/>
+            <ListBoxItem Content="4Q" FontFamily="Consolas"/>
+        </ComboBox>
+        <Viewbox Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
+            <Label x:Name="labelCode" Content="Course Code:" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Consolas"/>
+        </Viewbox>
+        <TextBox x:Name="textBoxCourseCode" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="10" Grid.RowSpan="3" TextWrapping="Wrap" FontFamily="Consolas" VerticalContentAlignment="Center"/>
+        <Viewbox Grid.Column="1" Grid.Row="14" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
+            <Label x:Name="labelStudentNumber" Content="Student Number:" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Consolas"/>
+        </Viewbox>
+        <TextBox x:Name="textBoxStudentNumber" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="14" Grid.RowSpan="3" TextWrapping="Wrap" FontFamily="Consolas" VerticalContentAlignment="Center"/>
+        <Viewbox Grid.Column="1" Grid.Row="18" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
+            <Label x:Name="labelFirstName" Content="Student First Name:" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Consolas"/>
+        </Viewbox>
+        <TextBox x:Name="textBoxStudentFirstName" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="18" Grid.RowSpan="3" TextWrapping="Wrap" FontFamily="Consolas" VerticalContentAlignment="Center"/>
+        <Viewbox Grid.Column="1" Grid.Row="22" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
+            <Label x:Name="labelLasttName" Content="Student Last Name:" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Consolas"/>
+        </Viewbox>
+        <TextBox x:Name="textBoxStudentLastName" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="22" Grid.RowSpan="3" TextWrapping="Wrap" FontFamily="Consolas" VerticalContentAlignment="Center"/>
+        <Viewbox Grid.Column="1" Grid.Row="26" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
+            <Label x:Name="labelGrade" Content="Grade:" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Consolas"/>
+        </Viewbox>
+        <TextBox x:Name="textBoxGrade" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="26" Grid.RowSpan="3" TextWrapping="Wrap" FontFamily="Consolas" VerticalContentAlignment="Center"/>
+        <Button x:Name="buttonCheck" Grid.ColumnSpan="10" Grid.Column="7" Grid.Row="30" Grid.RowSpan="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FF96FA96" Padding="5" BorderBrush="#FF1919C8">
+            <Image x:Name="imageCheck" Source="/GradeViewer;component/Logo/checkmark.png" Cursor="Hand"/>
+        </Button>
+        <Button x:Name="buttonCancel" Grid.ColumnSpan="10" Grid.Column="21" Grid.Row="30" Grid.RowSpan="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFC89696" Padding="5" BorderBrush="#FF1919C8" Click="buttonCancel_Click">
+            <Image x:Name="imageCancel" Source="/GradeViewer;component/Logo/cancel.png" Cursor="Hand"/>
+        </Button>
+    </Grid>
+</Window>
