@@ -12,3 +12,9 @@ Buenaventura, Baird Rouan <br>
 Baguisi, Jonathan <br>
 Cacas, Kimcarl <br>
 Malibiran, Joshua
+
+<br><br>Made Using Visua Studio Community 2019
+<br>Included Packages
+<br>SQLite v3.13.0
+<br>System.Data.SQLite v1.0.113.1
+<br>System.Data.SQLite.Core v1.0.113.1
