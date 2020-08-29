@@ -51,7 +51,7 @@ namespace GradeViewer.Classes
                     tracker = newNode;
                 }
             }
-            public bool GetNext()
+            public bool GetNextNode()
             {
                 bool eof = false;
                 Node current = printTracker;
@@ -69,6 +69,42 @@ namespace GradeViewer.Classes
                 else
                     printTracker = current.next;
                 return eof;
+            }
+            public void NextNode()
+            {
+                Node current = printTracker;
+                if (printTracker != null)
+                {
+                    UserIDPublic = current.UserIDNode;
+                    firstNamePublic = current.firstNameNode;
+                    lastNamePublic = current.lastNameNode;
+                }
+                if (printTracker == null)
+                {
+                    printTracker = head;
+                }
+                else
+                    printTracker = current.next;
+            }
+            public void GetNextUserIDNode()
+            {
+                Node current = head;
+                Node pointer = head.next;
+                while (current.next != null)
+                {
+                    if(pointer == null)
+                    {
+
+                    }
+                    while((current.UserIDNode + 1) == pointer.UserIDNode)
+                    {
+                        pointer = pointer.next;
+                        current = current.next;
+                    }
+                }
+                UserIDPublic = current.UserIDNode;
+                firstNamePublic = current.firstNameNode;
+                lastNamePublic = current.lastNameNode;
             }
         }
         //End of Linked List
@@ -172,7 +208,21 @@ namespace GradeViewer.Classes
         }
         public static bool ValidNextNode(ref LinkedList LL)
         {
-            return LL.GetNext();
+            return LL.GetNextNode();
+        }
+        public static void NextNode(ref LinkedList LL)
+        {
+            LL.NextNode();
+        }
+        public static void LastNode(ref LinkedList LL)
+        {
+            GetFullUserList(ref LL);
+            LL.GetNextUserIDNode();
+        }
+        public static void DeleteUser(int UserID)
+        {
+            string SQLCommandString = "DELETE FROM User_Account_Table WHERE UserID ='" + UserID + "'";
+            Database.ExecuteSQL(SQLCommandString);
         }
     }
 }

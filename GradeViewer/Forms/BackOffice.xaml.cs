@@ -24,7 +24,6 @@ namespace GradeViewer.Forms
         public BackOffice()
         {
             InitializeComponent();
-            UserListReload();
         }
 
         private void buttonCreateUser_Click(object sender, RoutedEventArgs e)
@@ -37,11 +36,6 @@ namespace GradeViewer.Forms
         }
 
         private void buttonReload_Click(object sender, RoutedEventArgs e)
-        {
-            UserListReload();
-        }
-
-        private void UserListTabFocus(object sender, RoutedEventArgs e)
         {
             UserListReload();
         }
@@ -75,6 +69,27 @@ namespace GradeViewer.Forms
             {
                 dataGridUserList.Items.Add(new UserListTMP { userID = UserAccDB.UserIDPublic.ToString(), firstName = UserAccDB.firstNamePublic.ToString(), lastName = UserAccDB.lastNamePublic.ToString() });
             }
+        }
+
+        private void buttonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            UserAccDB.LinkedList LL = new UserAccDB.LinkedList();
+            UserAccDB.GetFullUserList(ref LL);
+            if(dataGridUserList.SelectedIndex >= 0)
+            {
+                for (int i = 0; i <= dataGridUserList.SelectedIndex; i++)
+                {
+                    UserAccDB.NextNode(ref LL);
+                }
+                UserAccDB.DeleteUser(UserAccDB.UserIDPublic);
+            }
+            buttonDelete.IsEnabled = false;
+            UserListReload();
+        }
+
+        private void dataUserListSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            buttonDelete.IsEnabled = true;
         }
     }
 }

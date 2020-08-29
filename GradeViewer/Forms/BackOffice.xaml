@@ -148,7 +148,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TabControl x:Name="tabControl" Grid.ColumnSpan="77" Grid.Column="1" Grid.Row="1" Grid.RowSpan="55">
-            <TabItem x:Name="UserListTab" Header="User List" BorderBrush="#FF646464" FontFamily="Consolas" GotFocus="UserListTabFocus">
+            <TabItem x:Name="UserListTab" Header="User List" BorderBrush="#FF646464" FontFamily="Consolas">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
@@ -282,8 +282,7 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <DataGrid x:Name="dataGridUserList" Grid.ColumnSpan="74" Grid.Column="1" Grid.RowSpan="45" Grid.Row="1" FontSize="20"/>
-                    <Button x:Name="buttonDelete" FontWeight="Bold" BorderThickness="4" ClipToBounds="True" Cursor="Hand" BorderBrush="#FF323296" Background="#FFFAAAAA" Grid.Row="47" Grid.Column="49" Grid.RowSpan="4" Grid.ColumnSpan="15">
+                    <Button x:Name="buttonDelete" FontWeight="Bold" BorderThickness="4" ClipToBounds="True" Cursor="Hand" BorderBrush="#FF323296" Background="#FFFAAAAA" Grid.Row="47" Grid.Column="41" Grid.RowSpan="4" Grid.ColumnSpan="15" Click="buttonDelete_Click" IsEnabled="False">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="4*"/>
@@ -297,7 +296,7 @@
                             </Viewbox>
                         </Grid>
                     </Button>
-                    <Button x:Name="buttonCreateUser" FontWeight="Bold" BorderThickness="4" ClipToBounds="True" Cursor="Hand" BorderBrush="#FF323296" Background="#FFC8FA96" Grid.Row="47" Grid.Column="13" Grid.RowSpan="4" Grid.ColumnSpan="15" Click="buttonCreateUser_Click">
+                    <Button x:Name="buttonCreateUser" FontWeight="Bold" BorderThickness="4" ClipToBounds="True" Cursor="Hand" BorderBrush="#FF323296" Background="#FFC8FA96" Grid.Row="47" Grid.Column="21" Grid.RowSpan="4" Grid.ColumnSpan="15" Click="buttonCreateUser_Click">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="4*"/>
@@ -311,161 +310,12 @@
                             </Viewbox>
                         </Grid>
                     </Button>
-                    <Button x:Name="buttonEdit" FontWeight="Bold" BorderThickness="4" ClipToBounds="True" Cursor="Hand" BorderBrush="#FF323296" Background="#FFFAFAC8" Grid.Row="47" Grid.Column="31" Grid.RowSpan="4" Grid.ColumnSpan="15">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="10*"/>
-                            </Grid.ColumnDefinitions>
-                            <Viewbox Grid.Column="0">
-                                <Image Source="/GradeViewer;component/Logo/edit.png"/>
-                            </Viewbox>
-                            <Viewbox Grid.Column="1">
-                                <Label Content="EDIT" FontSize="100"/>
-                            </Viewbox>
-                        </Grid>
-                    </Button>
                     <Button x:Name="buttonReload" FontWeight="Bold" BorderThickness="4" ClipToBounds="True" Cursor="Hand" Grid.Row="47" Grid.Column="71" Grid.RowSpan="4" Grid.ColumnSpan="4" Background="#FF6464FA" Click="buttonReload_Click">
                         <Viewbox>
                             <Image Source="/GradeViewer;component/Logo/synchronize.png"/>
                         </Viewbox>
                     </Button>
-                </Grid>
-            </TabItem>
-            <TabItem Header="TabItem" BorderBrush="#FF646464">
-                <Grid Background="#FFE5E5E5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
+                    <DataGrid x:Name="dataGridUserList" Grid.ColumnSpan="74" Grid.Column="1" Grid.RowSpan="45" Grid.Row="1" FontSize="20" SelectionChanged="dataUserListSelectionChanged"/>
                 </Grid>
             </TabItem>
         </TabControl>
