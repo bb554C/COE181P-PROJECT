@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using GradeViewer.Classes;
+using StoreManagementSystem.Source_Code.Classes;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace GradeViewer.Forms
@@ -96,6 +98,14 @@ namespace GradeViewer.Forms
         }
         private void PinNumberChanged(object sender, TextChangedEventArgs e)
         {
+            IsValidUser = false;
+            string tempPin = UserAccDB.GetExistingPinCodeFromDB(passwordTextBox.Text);
+            if (tempPin == Encryption.ComputeSha256Hash(passwordTextBox.Text))
+            {
+                IsValidUser = true;
+                UserAccDB.CreateUserLoginTMP(passwordTextBox.Text);
+                this.Close();
+            }
             DisplayPinNumber();
         }
         private void CheckPinLength()

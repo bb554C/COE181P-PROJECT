@@ -105,12 +105,12 @@
                 <Label x:Name="labelButton3" Content="3"/>
             </Viewbox>
         </Button>
-        <Button x:Name="buttonNumber2" FontWeight="Bold" BorderThickness="5" ClipToBounds="True" FontFamily="Consolas" FontSize="50" Click="ButtonNumber6_Click" TabIndex="10" Cursor="Hand" BorderBrush="#FF323296" Background="#FFDDDDDD" Grid.Row="20" Grid.Column="8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="5" Grid.RowSpan="5">
+        <Button x:Name="buttonNumber2" FontWeight="Bold" BorderThickness="5" ClipToBounds="True" FontFamily="Consolas" FontSize="50" Click="ButtonNumber2_Click" TabIndex="10" Cursor="Hand" BorderBrush="#FF323296" Background="#FFDDDDDD" Grid.Row="20" Grid.Column="8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.ColumnSpan="5" Grid.RowSpan="5">
             <Viewbox MinWidth="10" MinHeight="10">
                 <Label x:Name="labelButton2" Content="2"/>
             </Viewbox>
         </Button>
-        <Button x:Name="buttonNumber1" FontWeight="Bold" BorderThickness="5" ClipToBounds="True" FontFamily="Consolas" FontSize="50" Click="ButtonNumber6_Click" TabIndex="10" Cursor="Hand" BorderBrush="#FF323296" Background="#FFDDDDDD" Grid.Row="20" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.RowSpan="5" Grid.ColumnSpan="5">
+        <Button x:Name="buttonNumber1" FontWeight="Bold" BorderThickness="5" ClipToBounds="True" FontFamily="Consolas" FontSize="50" Click="ButtonNumber1_Click" TabIndex="10" Cursor="Hand" BorderBrush="#FF323296" Background="#FFDDDDDD" Grid.Row="20" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.RowSpan="5" Grid.ColumnSpan="5">
             <Viewbox MinWidth="10" MinHeight="10">
                 <Label x:Name="labelButton1" Content="1"/>
             </Viewbox>

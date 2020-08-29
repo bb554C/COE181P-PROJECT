@@ -21,5 +21,10 @@ namespace GradeViewer.Forms
         {
             this.Close();
         }
+
+        private void buttonCheck_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GradeViewer"
         mc:Ignorable="d"
-        Title="Grade Viewer System" MinWidth="800" MinHeight="600" WindowStartupLocation="CenterScreen" WindowState="Maximized" Width="800" Height="600">
+        Title="Grade Viewer System" MinWidth="800" MinHeight="600" WindowStartupLocation="CenterScreen" WindowState="Maximized" Width="800" Height="600" Closing="MainWindowClosing">
     <Grid Background="#E5969696">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -128,37 +128,36 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="buttonAdmin" Grid.ColumnSpan="25" Grid.Column="7" Grid.Row="17" Grid.RowSpan="25" Click="buttonBackOffice_Click" BorderBrush="#FF1E1EAF" Padding="0" Margin="0" Cursor="Hand">
+        <Button x:Name="buttonAdmin" BorderThickness="10" Grid.ColumnSpan="25" Grid.Column="7" Grid.Row="17" Grid.RowSpan="25" Click="buttonBackOffice_Click" BorderBrush="#FF323296" Padding="2" Margin="0" Cursor="Hand">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="6*"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
                 <Viewbox Grid.Row="0">
-                    <Image x:Name="imageBackOffice" Source="Logo/desk.png"/>
+                    <Image Source="Logo/desk.png"/>
                 </Viewbox>
                 <Viewbox Grid.Row="1">
-                    <Label x:Name="labelBackOffice" Content="Back Office" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold" />
+                    <Label Content="Back Office" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold" />
                 </Viewbox>
             </Grid>
         </Button>
-        <Button x:Name="buttonView" Grid.ColumnSpan="25" Grid.Column="38" Grid.Row="17" Grid.RowSpan="25" Padding="0" BorderBrush="#FF1E1EAF" Cursor="Hand">
+        <Button x:Name="buttonView" BorderThickness="10" Grid.ColumnSpan="25" Grid.Column="38" Grid.Row="17" Grid.RowSpan="25" Padding="0" BorderBrush="#FF323296" Cursor="Hand">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="6*"/>
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
                 <Viewbox Grid.Row="0">
-                    <Image x:Name="imageDisplay" Source="Logo/monitor.png"/>
+                    <Image Source="Logo/monitor.png"/>
                 </Viewbox>
                 <Viewbox Grid.Row="1">
-                    <Label x:Name="labelDisplay" Content="Display Grades" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold" />
+                    <Label Content="Display Grades" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Consolas" FontWeight="Bold" />
                 </Viewbox>
             </Grid>
         </Button>
         <Viewbox Grid.Column="7" Grid.Row="3" Grid.RowSpan="12" Grid.ColumnSpan="56">
-            <Label x:Name="label" Content="Grade Viewer System" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Consolas"/>
+            <Label Content="Grade Viewer System" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Consolas"/>
         </Viewbox>
-
     </Grid>
 </Window>
