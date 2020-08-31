@@ -33,3 +33,5 @@ C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\bin\Debug\EntityFram
 C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\bin\Debug\System.Data.SQLite.xml
 C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\GradeViewer.csproj.CopyComplete
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\Forms\DisplayGrades.g.cs
+C:\Users\BAIRD\Documents\GitHub\COE181P-PROJECT\GradeViewer\obj\Debug\Forms\DisplayGrades.baml

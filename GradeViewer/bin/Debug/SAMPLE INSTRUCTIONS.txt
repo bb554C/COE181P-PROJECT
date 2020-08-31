@@ -1,0 +1,3 @@
+DEFAULT ADMIN PINCODE: 00000
+
+Sample Database Student Number: 2014107362

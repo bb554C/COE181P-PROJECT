@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GradeViewer.Forms"
         mc:Ignorable="d"
-        Title="Back Office" Height="600" Width="800" MinHeight="600" MinWidth="800" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+        Title="Back Office" Height="600" Width="800" MinHeight="600" MinWidth="800" WindowState="Maximized" WindowStartupLocation="CenterScreen" Icon="/GradeViewer;component/Logo/BB Logo.PNG" Closing="backOffice_Closing">
     <Grid Background="#E5969696">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -282,7 +282,7 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    <Button x:Name="buttonDelete" FontWeight="Bold" BorderThickness="4" ClipToBounds="True" Cursor="Hand" BorderBrush="#FF323296" Background="#FFFAAAAA" Grid.Row="47" Grid.Column="41" Grid.RowSpan="4" Grid.ColumnSpan="15" Click="buttonDelete_Click" IsEnabled="False">
+                    <Button x:Name="buttonDelete" FontWeight="Bold" BorderThickness="4" ClipToBounds="True" Cursor="Hand" BorderBrush="#FF323296" Background="#FFFAAAAA" Grid.Row="47" Grid.Column="41" Grid.RowSpan="4" Grid.ColumnSpan="15" Click="buttonDeleteUser_Click" IsEnabled="False">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="4*"/>
@@ -303,19 +303,200 @@
                                 <ColumnDefinition Width="10*"/>
                             </Grid.ColumnDefinitions>
                             <Viewbox Grid.Column="0">
-                                <Image Source="add-property.png"/>
+                                <Image Source="/GradeViewer;component/Logo/add.png"/>
                             </Viewbox>
                             <Viewbox Grid.Column="1">
                                 <Label Content="CREATE USER" FontSize="100"/>
                             </Viewbox>
                         </Grid>
                     </Button>
-                    <Button x:Name="buttonReload" FontWeight="Bold" BorderThickness="4" ClipToBounds="True" Cursor="Hand" Grid.Row="47" Grid.Column="71" Grid.RowSpan="4" Grid.ColumnSpan="4" Background="#FF6464FA" Click="buttonReload_Click">
+                    <Button x:Name="buttonReload" FontWeight="Bold" BorderThickness="4" ClipToBounds="True" Cursor="Hand" Grid.Row="47" Grid.Column="71" Grid.RowSpan="4" Grid.ColumnSpan="4" Background="#FF6464FA" Click="buttonReloadUserList_Click" BorderBrush="#FF1919C8">
                         <Viewbox>
                             <Image Source="/GradeViewer;component/Logo/synchronize.png"/>
                         </Viewbox>
                     </Button>
-                    <DataGrid x:Name="dataGridUserList" Grid.ColumnSpan="74" Grid.Column="1" Grid.RowSpan="45" Grid.Row="1" FontSize="20" SelectionChanged="dataUserListSelectionChanged"/>
+                    <DataGrid x:Name="dataGridUserList" Grid.ColumnSpan="74" Grid.Column="1" Grid.RowSpan="45" Grid.Row="1" FontSize="20" SelectionChanged="dataUserListSelectionChanged" IsReadOnly="True" CanUserReorderColumns="False"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="GradesListTab" Header="Grades List" BorderBrush="#FF646464" FontFamily="Consolas">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="buttonDeleteGrades" FontWeight="Bold" BorderThickness="4" ClipToBounds="True" Cursor="Hand" BorderBrush="#FF323296" Background="#FFFAAAAA" Grid.Row="47" Grid.Column="41" Grid.RowSpan="4" Grid.ColumnSpan="15" Click="buttonDeleteGrades_Click" IsEnabled="False">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="10*"/>
+                            </Grid.ColumnDefinitions>
+                            <Viewbox Grid.Column="0">
+                                <Image Source="/GradeViewer;component/Logo/delete.png"/>
+                            </Viewbox>
+                            <Viewbox Grid.Column="1">
+                                <Label Content="DELETE" FontSize="100"/>
+                            </Viewbox>
+                        </Grid>
+                    </Button>
+                    <Button x:Name="buttonAddItem" FontWeight="Bold" BorderThickness="4" ClipToBounds="True" Cursor="Hand" BorderBrush="#FF323296" Background="#FFC8FA96" Grid.Row="47" Grid.Column="21" Grid.RowSpan="4" Grid.ColumnSpan="15" Click="buttonAddItem_Click">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="10*"/>
+                            </Grid.ColumnDefinitions>
+                            <Viewbox Grid.Column="0">
+                                <Image Source="/GradeViewer;component/Logo/add.png"/>
+                            </Viewbox>
+                            <Viewbox Grid.Column="1">
+                                <Label Content="ADD ITEM" FontSize="100"/>
+                            </Viewbox>
+                        </Grid>
+                    </Button>
+                    <Button x:Name="buttonGradesListReload" FontWeight="Bold" BorderThickness="4" ClipToBounds="True" Cursor="Hand" Grid.Row="47" Grid.Column="71" Grid.RowSpan="4" Grid.ColumnSpan="4" Background="#FF6464FA" Click="buttonGradesListReload_Click" BorderBrush="#FF1919C8">
+                        <Viewbox>
+                            <Image Source="/GradeViewer;component/Logo/synchronize.png"/>
+                        </Viewbox>
+                    </Button>
+                    <DataGrid x:Name="dataGridGradesList" Grid.Row="5" Grid.Column="1" Grid.RowSpan="41" Grid.ColumnSpan="74" FontSize="20" SelectionChanged="dataGridGradesList_SelectionChanged" CanUserReorderColumns="False" IsReadOnly="True"/>
+                    <Viewbox Grid.ColumnSpan="8" Grid.RowSpan="2">
+                        <Label Content="FILTERS" FontSize="72"/>
+                    </Viewbox>
+                    <Viewbox Grid.ColumnSpan="10" Grid.RowSpan="2" Grid.Column="2" Grid.Row="2">
+                        <Label Content="Academic Year:" FontSize="72"/>
+                    </Viewbox>
+                    <ComboBox x:Name="comboBoxAY" Grid.ColumnSpan="10" Grid.Column="12" Grid.Row="2" Grid.RowSpan="2" SelectionChanged="comboBoxAY_SelectionChanged" VerticalContentAlignment="Center"/>
+                    <Viewbox Grid.ColumnSpan="10" Grid.RowSpan="2" Grid.Column="23" Grid.Row="2">
+                        <Label Content="Quarter:" FontSize="72"/>
+                    </Viewbox>
+                    <ComboBox x:Name="comboBoxQuarter" Grid.ColumnSpan="10" Grid.Column="32" Grid.Row="2" Grid.RowSpan="2" SelectionChanged="comboBoxQuarter_SelectionChanged" VerticalContentAlignment="Center"/>
                 </Grid>
             </TabItem>
         </TabControl>

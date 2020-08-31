@@ -37,22 +37,21 @@ namespace GradeViewer.Classes
             {
                 SQLiteConnection.CreateFile(@"Database\GradeViewerDB.db");
                 ExecuteSQL(UserAccDB.CreateInitialTable(), UserAccDB.CreateInitialUser());
+                ExecuteSQL(GradesDB.CreateInitialTable());
             }
         }
         public static void ExecuteSQL(string SQLCommandString)
         {
-            SQLiteCommand SQLCMD;
             SQLiteConnection SQLConnection = CreateConnection();
-            SQLCMD = SQLConnection.CreateCommand();
+            SQLiteCommand SQLCMD = SQLConnection.CreateCommand();
             SQLCMD.CommandText = SQLCommandString;
             SQLCMD.ExecuteNonQuery();
             SQLConnection.Close();
         }
         public static void ExecuteSQL(string SQLCreateTable, string SQLInitialTable)
         {
-            SQLiteCommand SQLCMD;
             SQLiteConnection SQLConnection = CreateConnection();
-            SQLCMD = SQLConnection.CreateCommand();
+            SQLiteCommand SQLCMD = SQLConnection.CreateCommand();
             SQLCMD.CommandText = SQLCreateTable;
             SQLCMD.ExecuteNonQuery();
             SQLCMD.CommandText = SQLInitialTable;

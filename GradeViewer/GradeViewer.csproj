@@ -79,6 +79,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Forms\DisplayGrades.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Forms\NewEntry.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -101,9 +105,13 @@
     </Compile>
     <Compile Include="Classes\Database.cs" />
     <Compile Include="Classes\Encryption.cs" />
+    <Compile Include="Classes\GradesDB.cs" />
     <Compile Include="Classes\UserAccDB.cs" />
     <Compile Include="Forms\BackOffice.xaml.cs">
       <DependentUpon>BackOffice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DisplayGrades.xaml.cs">
+      <DependentUpon>DisplayGrades.xaml</DependentUpon>
     </Compile>
     <Compile Include="Forms\NewEntry.xaml.cs">
       <DependentUpon>NewEntry.xaml</DependentUpon>
@@ -183,7 +191,16 @@
     <Resource Include="Logo\edit.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Forms\add-property.png" />
+    <Resource Include="Logo\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Logo\BB Logo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Logo\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Logo\clear-filters.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

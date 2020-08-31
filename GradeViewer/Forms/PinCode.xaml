@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GradeViewer.Forms"
         mc:Ignorable="d"
-        Title="Enter Pin Code" WindowStartupLocation="CenterScreen" Height="450" Width="300" ResizeMode="NoResize" Closing="Close_PinCodeWindow">
+        Title="Enter Pin Code" WindowStartupLocation="CenterScreen" Height="450" Width="300" ResizeMode="NoResize" Closing="Close_PinCodeWindow" Icon="/GradeViewer;component/Logo/BB Logo.PNG">
     <Grid Background="#E55A5A5A">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
