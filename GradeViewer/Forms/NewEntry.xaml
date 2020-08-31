@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GradeViewer.Forms"
         mc:Ignorable="d"
-        Title="NewEntry" MinWidth="400" MinHeight="400" Height="400" Width="400" WindowStartupLocation="CenterScreen" Closing="newEntryClosing">
+        Title="NewEntry" MinWidth="400" MinHeight="400" Height="400" Width="400" WindowStartupLocation="CenterScreen" Closing="NewEntryClosing" Icon="/GradeViewer;component/Logo/BB Logo.PNG">
     <Grid Background="#E5969696">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -88,41 +88,51 @@
         <Viewbox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
             <Label Content="Academic Year:" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Consolas"/>
         </Viewbox>
-        <ComboBox x:Name="comboBoxAY" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="2" Grid.RowSpan="3" Padding="5" VerticalContentAlignment="Center"/>
         <Viewbox Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
             <Label Content="Quarter:" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Consolas"/>
         </Viewbox>
-        <ComboBox x:Name="comboBoxQuarter" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="6" Grid.RowSpan="3" VerticalContentAlignment="Center" Padding="5">
-            <ListBoxItem Content="1Q" FontFamily="Consolas"/>
-            <ListBoxItem Content="2Q" FontFamily="Consolas"/>
-            <ListBoxItem Content="3Q" FontFamily="Consolas"/>
-            <ListBoxItem Content="4Q" FontFamily="Consolas"/>
-        </ComboBox>
+        <Border x:Name="comboBoxAYBorder" BorderBrush="#FFFA1919" BorderThickness="3" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="2" Grid.RowSpan="3">
+            <ComboBox x:Name="comboBoxAY" SelectionChanged="ComboBoxAY_SelectionChanged" VerticalContentAlignment="Center"/>
+        </Border>
+        <Border x:Name="comboBoxQuarterBorder" BorderBrush="#FFFA1919" BorderThickness="3" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="6" Grid.RowSpan="3">
+            <ComboBox x:Name="comboBoxQuarter" SelectionChanged="ComboBoxQuarter_SelectionChanged" VerticalContentAlignment="Center"/>
+        </Border>
         <Viewbox Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
             <Label Content="Course Code:" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Consolas"/>
         </Viewbox>
-        <TextBox x:Name="textBoxCourseCode" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="10" Grid.RowSpan="3" TextWrapping="Wrap" FontFamily="Consolas" VerticalContentAlignment="Center"/>
+        <Border x:Name="textBoxCourseCodeBorder" BorderBrush="#FFFA1919" BorderThickness="3" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="10" Grid.RowSpan="3">
+            <TextBox x:Name="textBoxCourseCode" FontFamily="Consolas" VerticalContentAlignment="Center" TextChanged="textBoxCourseCode_TextChanged"/>
+        </Border>
         <Viewbox Grid.Column="1" Grid.Row="14" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
             <Label Content="Student Number:" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Consolas"/>
         </Viewbox>
-        <TextBox x:Name="textBoxStudentNumber" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="14" Grid.RowSpan="3" TextWrapping="Wrap" FontFamily="Consolas" VerticalContentAlignment="Center"/>
+        <Border x:Name="textBoxStudentNumberBorder" BorderBrush="#FFFA1919" BorderThickness="3" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="14" Grid.RowSpan="3">
+            <TextBox x:Name="textBoxStudentNumber" FontFamily="Consolas" VerticalContentAlignment="Center" TextChanged="textBoxStudentNumber_TextChanged"/>
+        </Border>
         <Viewbox Grid.Column="1" Grid.Row="18" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
             <Label Content="Student First Name:" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Consolas"/>
         </Viewbox>
-        <TextBox x:Name="textBoxStudentFirstName" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="18" Grid.RowSpan="3" TextWrapping="Wrap" FontFamily="Consolas" VerticalContentAlignment="Center"/>
+        <Border x:Name="textBoxStudentFirstNameBorder" BorderBrush="#FFFA1919" BorderThickness="3" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="18" Grid.RowSpan="3">
+            <TextBox x:Name="textBoxStudentFirstName" TextWrapping="Wrap" FontFamily="Consolas" VerticalContentAlignment="Center" TextChanged="textBoxStudentFirstName_TextChanged"/>
+        </Border>
         <Viewbox Grid.Column="1" Grid.Row="22" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
             <Label Content="Student Last Name:" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Consolas"/>
         </Viewbox>
-        <TextBox x:Name="textBoxStudentLastName" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="22" Grid.RowSpan="3" TextWrapping="Wrap" FontFamily="Consolas" VerticalContentAlignment="Center"/>
+        <Border x:Name="textBoxStudentLastNameBorder" BorderBrush="#FFFA1919" BorderThickness="3" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="22" Grid.RowSpan="3">
+            <TextBox x:Name="textBoxStudentLastName" TextWrapping="Wrap" FontFamily="Consolas" VerticalContentAlignment="Center" TextChanged="textBoxStudentLastName_TextChanged"/>
+        </Border>
         <Viewbox Grid.Column="1" Grid.Row="26" Grid.ColumnSpan="14" Grid.RowSpan="3" HorizontalAlignment="Right">
             <Label Content="Grade:" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" FontFamily="Consolas"/>
         </Viewbox>
-        <TextBox x:Name="textBoxGrade" Grid.ColumnSpan="22" Grid.Column="15" Grid.Row="26" Grid.RowSpan="3" TextWrapping="Wrap" FontFamily="Consolas" VerticalContentAlignment="Center"/>
-        <Button x:Name="buttonCheck" BorderThickness="4" Grid.ColumnSpan="10" Grid.Column="7" Grid.Row="30" Grid.RowSpan="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFC8FAC8" BorderBrush="#FF1919C8" Click="buttonCheck_Click">
+        <Border  x:Name="textBoxGradeBorder" BorderBrush="#FFFA1919" BorderThickness="3" Grid.ColumnSpan="20" Grid.Column="15" Grid.Row="26" Grid.RowSpan="3">
+            <TextBox x:Name="textBoxGrade" TextWrapping="Wrap" FontFamily="Consolas" VerticalContentAlignment="Center" TextChanged="textBoxGrade_TextChanged"/>
+        </Border>
+        <Button x:Name="buttonCheck" BorderThickness="4" Grid.ColumnSpan="10" Grid.Column="7" Grid.Row="30" Grid.RowSpan="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFC8FAC8" BorderBrush="#FF1919C8" Click="ButtonCheck_Click">
             <Image x:Name="imageCheck" Source="/GradeViewer;component/Logo/checkmark.png" Cursor="Hand"/>
         </Button>
-        <Button x:Name="buttonCancel" BorderThickness="4" Grid.ColumnSpan="10" Grid.Column="21" Grid.Row="30" Grid.RowSpan="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFFAC8C8" BorderBrush="#FF1919C8" Click="buttonCancel_Click">
+        <Button x:Name="buttonCancel" BorderThickness="4" Grid.ColumnSpan="10" Grid.Column="21" Grid.Row="30" Grid.RowSpan="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FFFAC8C8" BorderBrush="#FF1919C8" Click="ButtonCancel_Click">
             <Image x:Name="imageCancel" Source="/GradeViewer;component/Logo/cancel.png" Cursor="Hand"/>
         </Button>
+        <Label Content="%" VerticalContentAlignment="Center" FontFamily="Consolas" Grid.ColumnSpan="5" Grid.RowSpan="3" Grid.Row="26" Grid.Column="35" FontSize="20" FontWeight="Bold"/>
     </Grid>
 </Window>

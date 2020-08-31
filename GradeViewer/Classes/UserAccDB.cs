@@ -1,13 +1,7 @@
-﻿using GradeViewer.Forms;
-using StoreManagementSystem.Source_Code.Classes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using StoreManagementSystem.Source_Code.Classes;
+using System.Data;
 using System.Data.SQLite;
 using System.IO;
-using System.Runtime.Remoting.Messaging;
 
 namespace GradeViewer.Classes
 {
@@ -17,7 +11,6 @@ namespace GradeViewer.Classes
         public static string firstNamePublic { get; set; }
         public static string lastNamePublic { get; set; }
         public static string pinCodePublic { get; set; }
-
         //Linked List
         public class Node
         {
@@ -88,20 +81,7 @@ namespace GradeViewer.Classes
             }
             public void GetNextUserIDNode()
             {
-                Node current = head;
-                Node pointer = head.next;
-                while (current.next != null)
-                {
-                    if(pointer == null)
-                    {
-
-                    }
-                    while((current.UserIDNode + 1) == pointer.UserIDNode)
-                    {
-                        pointer = pointer.next;
-                        current = current.next;
-                    }
-                }
+                Node current = tracker;
                 UserIDPublic = current.UserIDNode;
                 firstNamePublic = current.firstNameNode;
                 lastNamePublic = current.lastNameNode;
@@ -112,8 +92,8 @@ namespace GradeViewer.Classes
         {
             string SQLCreateTable = "CREATE TABLE User_Account_Table ("
             + "UserID INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE,"
-            + "First_Name TEXT,"
-            + "Last_Name TEXT,"
+            + "First_Name TEXT NOT NULL,"
+            + "Last_Name TEXT NOT NULL,"
             + "Pincode TEXT NOT NULL UNIQUE);";
             return SQLCreateTable;
         }

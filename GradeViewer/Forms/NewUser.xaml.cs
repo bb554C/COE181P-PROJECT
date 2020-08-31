@@ -21,13 +21,12 @@ namespace GradeViewer.Forms
     /// </summary>
     public partial class NewUser : Window
     {
-        public BackOffice backOffice = new BackOffice();
+        public BackOffice backOffice { get; set; }
         public NewUser()
         {
             InitializeComponent();
             
         }
-
         private void buttonCheck_Click(object sender, RoutedEventArgs e)
         {
             if (textBoxFirstName.Text != "" && textBoxLastName.Text != "" && (passwordBoxConfirmPinCode.Password == passwordBoxPinCode.Password))
